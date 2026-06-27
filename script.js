@@ -23,10 +23,15 @@ function createGrid(x){
             box.style.width = `${960 / x}px`;
             box.style.height = `${960 / x}px`;
             row.append(box);
-            box.addEventListener("mouseover",()=>{
-                box.style.backgroundColor = "black";
+            box.addEventListener("mouseover", () => {
+                const r = Math.floor((Math.random() * 127) + 127);
+                const g = Math.floor((Math.random() * 127) + 127);
+                const b = Math.floor((Math.random() * 127) + 127);
 
-            });
+                 box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                });
+
+            
         }
     }
 }
